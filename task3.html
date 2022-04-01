@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;    
+        }
+        /* #heart{
+            height: 200px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 400px;
+            position: relative;
+            transition: all .5s;
+        }
+        #heart:hover{
+            transform: scale(1.2);
+        } */
+        #heart{
+            height: 200px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 400px;
+            position: relative;
+            animation: heart 1.5s infinite alternate;
+        }
+        @keyframes heart{
+            0%{
+                transform:none;
+            }
+            100%{
+                transform:scale(1.2);
+            }
+        }
+        #heart>.left{
+            border: 1px solid red;
+            width: 600px;
+            height: 330px;
+            position: absolute;
+            bottom: 100%;
+            right: 100%;
+            transform: rotate(45deg) translateX(238px);
+            border-radius: 50% 0 0 50%;
+            background: red;
+        }
+        #heart>.right{
+            border: 1px solid red;
+            width: 330px;
+            height: 600px;
+            position: absolute;
+            bottom: 100%;
+            left: 100%;
+            transform: rotate(45deg) translateY(429px);
+            border-radius: 50% 50% 0 0;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
